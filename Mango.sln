@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mango.Services.CouponAPI", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mango.Web", "Mango.Web\Mango.Web.csproj", "{9EE4DFAA-92EC-49FA-886C-EF82BFEC1641}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mango.Services.AuthAPI", "Mango.Services.CouponAPI\Mango.Services.AuthAPI\Mango.Services.AuthAPI.csproj", "{75AB243E-DC3C-41C2-96D4-F5E18027946F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mango.Services.AuthAPI", "Mango.Services.AuthAPI\Mango.Services.AuthAPI.csproj", "{097510D6-359D-4EBE-8C83-BAE75E254EA9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,10 +31,10 @@ Global
 		{9EE4DFAA-92EC-49FA-886C-EF82BFEC1641}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9EE4DFAA-92EC-49FA-886C-EF82BFEC1641}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9EE4DFAA-92EC-49FA-886C-EF82BFEC1641}.Release|Any CPU.Build.0 = Release|Any CPU
-		{75AB243E-DC3C-41C2-96D4-F5E18027946F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{75AB243E-DC3C-41C2-96D4-F5E18027946F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{75AB243E-DC3C-41C2-96D4-F5E18027946F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{75AB243E-DC3C-41C2-96D4-F5E18027946F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{097510D6-359D-4EBE-8C83-BAE75E254EA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{097510D6-359D-4EBE-8C83-BAE75E254EA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{097510D6-359D-4EBE-8C83-BAE75E254EA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{097510D6-359D-4EBE-8C83-BAE75E254EA9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -45,6 +45,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{B7167981-3E84-4E48-8CE6-BB273B62DF69} = {CF94A0E3-8932-4FC6-8850-72C068FD6E0F}
 		{9EE4DFAA-92EC-49FA-886C-EF82BFEC1641} = {7DB8609F-FD70-4633-9052-51B7137A15AC}
-		{75AB243E-DC3C-41C2-96D4-F5E18027946F} = {CF94A0E3-8932-4FC6-8850-72C068FD6E0F}
+		{097510D6-359D-4EBE-8C83-BAE75E254EA9} = {CF94A0E3-8932-4FC6-8850-72C068FD6E0F}
 	EndGlobalSection
 EndGlobal
