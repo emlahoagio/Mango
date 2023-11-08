@@ -3,6 +3,7 @@ using Mango.Web.Service.IService;
 using Mango.Web.Utility;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Newtonsoft.Json;
 
 namespace Mango.Web.Controllers
 {
@@ -22,6 +23,25 @@ namespace Mango.Web.Controllers
             return View(loginRequestDto);
         }
 
+        [HttpPost]
+        public async Task<IActionResult> Login(LoginRequestDto dto)
+        {
+            ResponseDto responseDto = await _authService.LoginAsync(dto);
+
+            if (responseDto != null && responseDto.IsSuccess)
+            {
+                LoginResponseDto loginResponseDto =
+                    JsonConvert.DeserializeObject<LoginResponseDto>(Convert.ToString(responseDto.Result));
+
+                return RedirectToAction("Index", "Home");
+            }
+            else
+            {
+                ModelState.AddModelError("CustomError", responseDto.Message);
+                return View(dto);
+            }
+        }
+
         [HttpGet]
         public IActionResult Register()
         {
@@ -37,10 +57,10 @@ namespace Mango.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(RegistrationRequestDto dto)
         {
-            ResponseDto result = await _authService.RegisterAsync(dto);
+            ResponseDto responseDto = await _authService.RegisterAsync(dto);
             ResponseDto assignRole;
 
-            if (result != null && result.IsSuccess)
+            if (responseDto != null && responseDto.IsSuccess)
             {
                 if (string.IsNullOrEmpty(dto.Role))
                 {
