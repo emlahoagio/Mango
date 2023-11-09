@@ -39,10 +39,10 @@
                             @item.CouponCode
                         </td>
                         <td>
-                            @((item.DiscountAmount).ToString("c"))
+                            @item.DiscountAmount $
                         </td>
                         <td>
-                            @((item.MinAmount).ToString("c"))
+                            @item.MinAmount $
                         </td>
                         <td>
                             <a asp-action="CouponDelete" asp-route-couponId="@item.CouponId" class="btn btn-danger">
