@@ -11,6 +11,7 @@
   "profiles": {
     "Mango.Services.CouponAPI": {
       "commandName": "Project",
+      "launchBrowser": true,
       "launchUrl": "swagger",
       "applicationUrl": "https://localhost:7001;http://localhost:5165",
       "environmentVariables": {
