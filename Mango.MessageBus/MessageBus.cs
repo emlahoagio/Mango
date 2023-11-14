@@ -10,19 +10,27 @@ namespace Mango.MessageBus
 
         public async Task PublishMessage(object message, string topic_queue_Name)
         {
-            await using var client = new ServiceBusClient(connectionString);
-
-            ServiceBusSender sender = client.CreateSender(topic_queue_Name);
-
-            var jsonMessage = JsonConvert.SerializeObject(message);
-
-            ServiceBusMessage finalMessage = new ServiceBusMessage(Encoding.UTF8.GetBytes(jsonMessage))
+            try
             {
-                CorrelationId = Guid.NewGuid().ToString(),
-            };
+                await using var client = new ServiceBusClient(connectionString);
 
-            await sender.SendMessageAsync(finalMessage);
-            await client.DisposeAsync();
+                ServiceBusSender sender = client.CreateSender(topic_queue_Name);
+
+                var jsonMessage = JsonConvert.SerializeObject(message);
+
+                ServiceBusMessage finalMessage = new ServiceBusMessage(Encoding.UTF8.GetBytes(jsonMessage))
+                {
+                    CorrelationId = Guid.NewGuid().ToString(),
+                };
+
+                await sender.SendMessageAsync(finalMessage);
+                await client.DisposeAsync();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
         }
     }
 }
