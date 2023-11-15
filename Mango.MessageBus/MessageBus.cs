@@ -6,7 +6,9 @@ namespace Mango.MessageBus
 {
     public class MessageBus : IMessageBus
     {
-        private string connectionString = "Endpoint=sb://quandtm-mangoweb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=2P4DxW+b5rzsj8JL4al1/kQ7VBEjrD5/U+ASbK57I1s=;EntityPath=emailshoppingcart";
+        private string connectionString = "Endpoint=sb://quandtm-mangoweb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=5IrB7HoBuUZF51So9+e9Eo/wfDcBr5MFH+ASbCEO2ho=";
+
+
 
         public async Task PublishMessage(object message, string topic_queue_Name)
         {
