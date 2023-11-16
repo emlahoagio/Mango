@@ -56,9 +56,11 @@ namespace Mango.Web.Controllers
                 var stripeResponse = await _orderService.CreateStripeSession(stripeRequestDto);
                 StripeRequestDto stripeResponseResult = JsonConvert.DeserializeObject<StripeRequestDto>(Convert.ToString(stripeResponse.Result));
                 Response.Headers.Add("Location", stripeResponseResult.StripeSessionUrl);
+
                 return new StatusCodeResult(303);
+
             }
-            return RedirectToAction(nameof(CartIndex));
+            return View();
         }
 
         [Authorize]
