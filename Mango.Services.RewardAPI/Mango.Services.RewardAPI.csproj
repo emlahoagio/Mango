@@ -26,8 +26,10 @@
 
   <ItemGroup>
     <None Remove="Controllers\" />
+    <None Remove="Message\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
+    <Folder Include="Message\" />
   </ItemGroup>
 </Project>
