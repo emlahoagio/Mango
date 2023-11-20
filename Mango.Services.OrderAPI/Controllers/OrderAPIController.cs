@@ -88,7 +88,7 @@ namespace Mango.Services.OrderAPI.Controllers
 
                 var service = new SessionService();
                 Session session = service.Create(options);
-                stripeRequestDto.StripeSessionId = session.Url;
+                stripeRequestDto.StripeSessionUrl = session.Url;
                 OrderHeader orderHeader = _db.OrderHeaders.First(u => u.OrderHeaderId == stripeRequestDto.OrderHeader.OrderHeaderId);
                 orderHeader.StripeSessionId = session.Id;
                 _db.SaveChanges();
