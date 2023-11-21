@@ -1,6 +1,5 @@
 ﻿using Mango.Web.Service.IService;
 using Mango.Web.Utility;
-using NuGet.Common;
 
 namespace Mango.Web.Service
 {

@@ -11,7 +11,6 @@ namespace Mango.Web.Service
     {
         private readonly IHttpClientFactory _httpClientFactory;
         private readonly ITokenProvider _tokenProvider;
-
         public BaseService(IHttpClientFactory httpClientFactory, ITokenProvider tokenProvider)
         {
             _httpClientFactory = httpClientFactory;
@@ -72,6 +71,7 @@ namespace Mango.Web.Service
                 }
 
                 HttpResponseMessage? apiResponse = null;
+
                 switch (requestDto.ApiType)
                 {
                     case ApiType.POST:
@@ -118,4 +118,3 @@ namespace Mango.Web.Service
         }
     }
 }
-
