@@ -13,7 +13,7 @@ namespace Mango.Web.Service
             _baseService = baseService;
         }
 
-        public async Task<ResponseDto?> CreateProductAsync(ProductDto productDto)
+        public async Task<ResponseDto?> CreateProductsAsync(ProductDto productDto)
         {
             return await _baseService.SendAsync(new RequestDto()
             {
@@ -24,7 +24,7 @@ namespace Mango.Web.Service
             });
         }
 
-        public async Task<ResponseDto?> DeleteProductAsync(int id)
+        public async Task<ResponseDto?> DeleteProductsAsync(int id)
         {
             return await _baseService.SendAsync(new RequestDto()
             {
@@ -33,7 +33,7 @@ namespace Mango.Web.Service
             });
         }
 
-        public async Task<ResponseDto?> GetAllProductAsync()
+        public async Task<ResponseDto?> GetAllProductsAsync()
         {
             return await _baseService.SendAsync(new RequestDto()
             {
@@ -60,7 +60,7 @@ namespace Mango.Web.Service
             });
         }
 
-        public async Task<ResponseDto?> UpdateProductAsync(ProductDto productDto)
+        public async Task<ResponseDto?> UpdateProductsAsync(ProductDto productDto)
         {
             return await _baseService.SendAsync(new RequestDto()
             {

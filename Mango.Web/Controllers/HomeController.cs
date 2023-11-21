@@ -24,7 +24,7 @@ public class HomeController : Controller
     public async Task<IActionResult> Index()
     {
         List<ProductDto>? list = new();
-        ResponseDto? response = await _productService.GetAllProductAsync();
+        ResponseDto? response = await _productService.GetAllProductsAsync();
         if (response != null && response.IsSuccess)
         {
             list = JsonConvert.DeserializeObject<List<ProductDto>>(Convert.ToString(response.Result));
